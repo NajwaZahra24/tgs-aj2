@@ -3,35 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biodata Diri</title>
+    <title>Biodata David Wahyu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary: #DB8DD0;
+            --secondary: #C562AF;
+            --dark: #B33791;
+            --light: #FEC5F6;
+            --accent: #DB8DD0;
+        }
+        
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f8ff;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             line-height: 1.6;
-            margin: 20px;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--dark);
         }
+        
         .container {
-            max-width: 600px;
-            margin: auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease;
         }
+        
+        .container:hover {
+            transform: translateY(-5px);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .header::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+        
         h1 {
-            color: #333;
+            color: var(--dark);
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 700;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin: 0 auto 20px;
+            display: block;
+            background-color: #ddd;
+        }
+        
+        .info-item {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            border-left: 3px solid var(--primary);
+            transition: all 0.3s ease;
+        }
+        
+        .info-item:hover {
+            border-left: 3px solid var(--secondary);
+            transform: translateX(5px);
+        }
+        
+        .info-item strong {
+            color: var(--primary);
+            font-weight: 600;
+            display: inline-block;
+            min-width: 120px;
+        }
+        
+        .quote {
+            font-style: italic;
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: rgba(52, 152, 219, 0.1);
+            border-radius: 8px;
+            position: relative;
+        }
+        
+        .quote::before, .quote::after {
+            content: '"';
+            font-size: 2rem;
+            color: var(--primary);
+            opacity: 0.3;
+            position: absolute;
+        }
+        
+        .quote::before {
+            top: 5px;
+            left: 10px;
+        }
+        
+        .quote::after {
+            bottom: 5px;
+            right: 10px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .social-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Biodata Diri</h1>
-        <p><strong>Nama: Nana</strong>David Wahyu</p>
-        <p><strong>Kelas: XII SIJA 2</strong> 12</p>
-        <p><strong>Sekolah: SMK Telkom</strong> SMK Telkom Sidoarjo</p>
-        <p><strong>Jurusan:</strong> Sistem Informasi Jaringan dan Aplikasi (SIJA)</p>
-        <p><strong>Cita-cita:</strong> Menjadi seorang Full-Stack Engineer keren!</p>
+        <div class="header">
+            <img src="ariana.jpeg" alt="Foto Nana" class="profile-img">
+            <h1>Najwa K. Zahra</h1>
+            <p>Siswi SIJA | Future Full-Stack Engineer</p>
+        </div>
+        
+        <div class="info-item">
+            <strong>Nama:</strong> Najwa Zahra
+        </div>
+        
+        <div class="info-item">
+            <strong>Kelas:</strong> XII SIJA 2
+        </div>
+        
+        <div class="info-item">
+            <strong>Sekolah:</strong> SMK Telkom Sidoarjo
+        </div>
+        
+        <div class="info-item">
+            <strong>Jurusan:</strong> Sistem Informasi Jaringan dan Aplikasi (SIJA)
+        </div>
+        
+        <div class="info-item">
+            <strong>Cita-cita:</strong> Memiliki cita-cita
+        </div>
+        
+        <div class="quote">
+            "Kode yang baik adalah seperti puisi; menyampaikan ide yang kompleks dengan cara yang sederhana dan elegan."
+        </div>
+        
+        <div class="social-links">
+            <a href="#" class="social-link">In</a>
+            <a href="#" class="social-link">gh</a>
+            <a href="#" class="social-link">ig</a>
+            <a href="#" class="social-link">tw</a>
+        </div>
     </div>
 </body>
 </html>
